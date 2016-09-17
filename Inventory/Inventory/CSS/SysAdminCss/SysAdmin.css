@@ -1,0 +1,43 @@
+﻿body 
+{
+  font-size:11pt;
+  font-family:Verdana;
+background-color:ThreeDShadow;
+  
+}
+.back
+{
+    background-image:url(SysAdminImg/Background.JPG);
+ background-repeat:repeat-x;
+ border-left-color: black; border-bottom-color: black;
+            border-top-style: solid; border-top-color: black; border-right-style: solid;
+            border-left-style: solid; border-right-color: black; border-bottom-style: solid;
+}
+.head
+{
+     background-image:url(SysAdminImg/HeaderStrip.JPG);
+     background-repeat:no-repeat;
+     border-left-color: black; border-bottom-color: black;
+            border-top-style: solid; border-top-color: black; border-right-style: solid;
+            border-left-style: solid; border-right-color: black; border-bottom-style: solid;
+        
+}
+.foot
+{
+    background-image:url(SysAdminImg/Footer.JPG);
+    background-repeat:repeat-x;
+    border-left-color: black; border-bottom-color: black; border-top-style: solid;
+                                border-top-color: black; border-right-style: solid; border-left-style: solid;
+                                border-right-color: black; border-bottom-style: solid; vertical-align: middle;
+                                text-align: center;
+   
+}
+.redstr
+{
+    background-image:url(SysAdminImg/RedStrip.JPG);
+    background-repeat:repeat-x;
+    vertical-align: top; text-align: right; border-left-color: black;
+                    border-bottom-color: black; border-top-style: solid; border-top-color: black;
+                    border-right-style: solid; border-left-style: solid; border-right-color: black;
+                    border-bottom-style: solid;
+}

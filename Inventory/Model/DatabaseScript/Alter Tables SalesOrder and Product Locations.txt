@@ -1,0 +1,8 @@
+Alter Table [dbo].[ProductLocation] ADD [ADDRESS] NVARCHAR(250) NULL
+GO
+
+Alter Table [dbo].[SalesOrder] ADD PaymentMode varchar(150)NULL
+GO
+
+Alter Table [dbo].[SalesOrder] ADD Comments nvarchar(250) NULL
+GO

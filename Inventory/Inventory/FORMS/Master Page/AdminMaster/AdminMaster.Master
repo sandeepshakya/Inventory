@@ -1,0 +1,222 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminMaster.Master.cs" Inherits="Inventory.FORMS.Master_Page.AdminMaster.AdmMaster" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<%@ Import Namespace="System.IO" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+      <link rel="stylesheet" type="text/css" href="../../../CSS/CompanyAdminCss/CompanyAdminImg .css" />
+
+    <script type="text/javascript" language="javascript">
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours() == 0 ? 12 : (today.getHours() > 12 ? today.getHours() - 12 : today.getHours());
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var dt = today.getDate();
+            var mon = today.getMonth() + 1;
+            var yr = today.getFullYear();
+            // add a zero in front of numbers<10
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txtTime').innerHTML = "Time : " + h + ":" + m + ":" + s + " Date : " + dt + "-" + mon + "-" + yr;
+            t = setTimeout('startTime()', 500);
+        }
+
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+
+
+
+    </script>
+</head>
+<body onload="startTime()">
+    <form id="form1" runat="server" class="back">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <table width="100%" height="90px" class="head">
+            <tr>
+                <td style="vertical-align: top; text-align: left;">
+                    <asp:Image ID="Image2" runat="server" Height="55px" ImageUrl="~/CSS/SysAdminCss/SysAdminImg/large_logo.png"
+                        Width="55px" /></td>
+                <td style="text-align: right; color: #ffffff; vertical-align: top; height: 55px;">
+                    <asp:Image ID="Image3" runat="server" ImageAlign="Top" ImageUrl="~/CSS/SysAdminCss/SysAdminImg/Home.png" />
+                    <asp:LinkButton ID="lnkbtnHome" runat="server" CausesValidation="False" Font-Bold="False"
+                        Font-Size="10pt" Font-Underline="False" ForeColor="White">Home</asp:LinkButton>
+                    |
+                    <asp:LinkButton ID="lnkbtnLogout" runat="server" CausesValidation="False" Font-Bold="False"
+                        Font-Size="10pt" Font-Underline="False" ForeColor="White" OnClick="lnkbtnLogout_Click1">Logout</asp:LinkButton></td>
+            </tr>
+            <tr>
+                <td height="15px">
+                    <div id="txtTime" style="color: #ffffff">
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" height="745" border="0" cellspacing="0" cellpadding="0">
+            <tr width="100%">
+                <td style="vertical-align: middle; text-align: right; border-bottom-width: thin;
+                    border-bottom-color: #9999ff; width: 100%;">
+                    <table width="100%" height="15px" cellspacing="5">
+                        <tr>
+                            <td style="text-align: left; vertical-align: top;" class="redstr" width="100%">
+                                <asp:Label ID="lblMsg" runat="server" Style="position: relative" Text="Label" Font-Size="Small"
+                                    ForeColor="White"></asp:Label></td>
+                    </table>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" height="50%" border="0" cellspacing="5">
+                        <tr>
+                            <td style="vertical-align: top; width: 15%;">
+                                <table align="center" cellpadding="0" cellspacing="0" border="0" height="5%" style="text-align: center;
+                                    border-right: #ccccff thin outset; border-top: #ccccff thin outset; border-left: #ccccff thin outset;
+                                    border-bottom: #ccccff thin outset; width: 100%;">
+                                    <tr>
+                                        <td height="40px" class="nev2">
+                                            <ul>
+                                                <asp:Label ID="Label1" runat="server" Text="Operations" Font-Bold="True" Font-Names="Verdana"
+                                                    Font-Size="Small" ForeColor="HighlightText"></asp:Label>
+                                                <li></li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="40px" style="text-align: center;">
+                                            <asp:LinkButton ID="lnkbtnAddValue" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                                Font-Underline="False" ForeColor="Black" Width="200px" CausesValidation="False">Add Text</asp:LinkButton>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="40px" style="text-align: center;">
+                                            <asp:LinkButton ID="lnkEditValue" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                                Font-Underline="False" ForeColor="Black" Width="200px" CausesValidation="False">Edit Text</asp:LinkButton>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="40px" style="text-align: center;">
+                                            <asp:LinkButton ID="lnkbtnViewValue" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                                Font-Underline="False" ForeColor="Black" Width="200px" CausesValidation="False">View Text</asp:LinkButton>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="40px" style="text-align: center;">
+                                            <asp:LinkButton ID="lnkbtn1" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                                Font-Underline="False" ForeColor="Black" Width="200px" CausesValidation="False">View Text</asp:LinkButton>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="40px" style="text-align: center;">
+                                            <asp:LinkButton ID="lnkbtn2" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                                Font-Underline="False" ForeColor="Black" Width="200px" CausesValidation="False">View Text</asp:LinkButton>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="40px" style="text-align: center;">
+                                            <asp:LinkButton ID="lnkbtn3" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                                Font-Underline="False" ForeColor="Black" Width="200px" CausesValidation="False">View Text</asp:LinkButton>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br>
+                                <table align="center" cellpadding="0" cellspacing="0" border="0" height="100px" style="text-align: center;
+                                    border-right: #ccccff thin outset; border-top: #ccccff thin outset; border-left: #ccccff thin outset;
+                                    border-bottom: #ccccff thin outset; width: 100%;">
+                                    <tr>
+                                        <td height="40px" class="nev2">
+                                            <p>
+                                                <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Names="Verdana" Font-Size="Small"
+                                                    ForeColor="HighlightText" Text="Tools"></asp:Label>&nbsp;</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="40px" style="text-align: center; width: 100%; vertical-align: top;">
+                                            <asp:LinkButton ID="lnkbtnEvent" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                                Font-Underline="False" ForeColor="Black" Width="50px" Style="position: relative;
+                                                left: -24px; top: 7px;" CausesValidation="False">Events</asp:LinkButton>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="40px" style="text-align: center; width: 100%; vertical-align: top;">
+                                            <asp:LinkButton ID="lnkbtnNotePad" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                                Font-Underline="False" ForeColor="Black" Style="position: relative; left: -16px;
+                                                top: 9px;" Width="70px" OnClick="lnkbtnNotePad_Click" CausesValidation="False">Note Pad</asp:LinkButton></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center; width: 100%; vertical-align: top; height: 40px;">
+                                            <asp:LinkButton ID="lnkbtnHelp" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                                Font-Underline="False" ForeColor="Black" Style="position: relative; left: -32px;
+                                                top: 9px;" Width="40px" CausesValidation="False">Help</asp:LinkButton></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="text-align: center; width: 100%; height: 40px; vertical-align: top;">
+                                            <asp:LinkButton ID="lnkbtnCalculator" runat="server" Font-Names="Verdana" Font-Size="Small"
+                                                Font-Underline="False" ForeColor="Black" Style="position: relative; left: -16px;
+                                                top: 6px;" Width="70px" OnClick="lnkbtnCalculator_Click1" CausesValidation="False">Calculator</asp:LinkButton></td>
+                                    </tr>
+                                    <tr>
+                                        <td height="40px" style="text-align: center; width: 100%; vertical-align: top;">
+                                            <asp:TextBox ID="txtCal" runat="server" Width="70px"></asp:TextBox><asp:Image ID="Image1"
+                                                runat="server" ImageUrl="~/Images/Calendar_scheduleHS.png" Height="25px" Width="25px"
+                                                ImageAlign="AbsMiddle" /></td>
+                                    </tr>
+                                </table>
+                                &nbsp; &nbsp;&nbsp;
+                                <cc1:CalendarExtender ID="CalendarExtender1" runat="server" PopupButtonID="Image1"
+                                    TargetControlID="txtCal">
+                                </cc1:CalendarExtender>
+                                <cc1:TextBoxWatermarkExtender ID="TextBoxWatermarkExtender1" runat="server" TargetControlID="txtCal" WatermarkText="Calender">
+                                </cc1:TextBoxWatermarkExtender>
+                            </td>
+                            <td width="60%" class="new" style="" id="TD1">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" height="25px">
+                        <tr>
+                            <td class="foot" style="border-left-color: black; border-bottom-color: black; border-top-style: solid;
+                                border-top-color: black; border-right-style: solid; border-left-style: solid;
+                                border-right-color: black; border-bottom-style: solid; vertical-align: middle;
+                                text-align: center;">
+                                <asp:Label ID="Label4" runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="Azure"
+                                    Text="Total Registered Companies" Font-Italic="False"></asp:Label>-<asp:Label ID="lblTotalRegistered"
+                                        runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="White" Font-Italic="False"></asp:Label>
+                                |
+                                <asp:Label ID="Label6" runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="Azure"
+                                    Text="Approved Companies" Font-Italic="False"></asp:Label>-<asp:Label ID="lblApproved"
+                                        runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="White"></asp:Label>
+                                |
+                                <asp:Label ID="Label7" runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="Azure"
+                                    Text="Disapproved Companies" Font-Italic="False"></asp:Label>-<asp:Label ID="lblDisApproved"
+                                        runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="White" Font-Italic="False"></asp:Label>
+                                |
+                                <asp:Label ID="Label8" runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="Azure"
+                                    Text="Blocked Companies" Font-Italic="False"></asp:Label>-<asp:Label ID="lblBlocked"
+                                        runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="White" Font-Italic="False"></asp:Label>
+                                |
+                                <asp:Label ID="Label9" runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="Azure"
+                                    Text="Companies In Trial" Font-Italic="False"></asp:Label>-<asp:Label ID="lblTrial"
+                                        runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="White" Font-Italic="False"></asp:Label></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

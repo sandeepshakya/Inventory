@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+    <siteMapNode url="~/FORMS/System Admin/Home.aspx" title="Home"  description="">
+        <siteMapNode url="~/FORMS/System Admin/ResetPassword.aspx" title="My Account"  description="" />
+        <siteMapNode url="~/FORMS/System Admin/Registration.aspx" title="Create Company"  description="" />
+      <siteMapNode url="~/FORMS/System Admin/CompMgmt.aspx" title="Company Management"  description="" />
+      <siteMapNode url="~/FORMS/System Admin/Admin Manage.aspx" title="Manage User"  description="" />
+      <siteMapNode url="" title=""  description="" />
+    </siteMapNode>
+</siteMap>

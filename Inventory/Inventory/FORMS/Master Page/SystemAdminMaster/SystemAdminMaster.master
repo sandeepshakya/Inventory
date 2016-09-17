@@ -1,0 +1,41 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="SystemAdminMaster.master.cs"
+    Inherits="FORMS_Master_Page_SystemAdminMaster_SystemAdminMaster" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="../../../CSS/style.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table width="15%" cellpadding="0" cellspacing="10" style="border-right: #cc0066 thin solid;
+            border-top: #cc0066 thin solid; border-left: #cc0066 thin solid; border-bottom: #cc0066 thin solid;
+            text-align: left; vertical-align: middle; line-height: 20pt;">
+            <tr valign="top">
+                <td width="20%">
+                    <asp:ImageButton
+                            ID="imgbtnHome" runat="server" ImageUrl="~/Images/System Admin/Home.png" CausesValidation="False" OnClick="imgbtnHome_Click"  /></td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <asp:ImageButton ID="imgbtnCompMgmt" runat="server" ImageUrl="~/Images/System Admin/compmgmt.png" CausesValidation="False" OnClick="imgbtnCompMgmt_Click" /></td>
+            </tr>
+            <tr>
+                <td width="20%">
+                    <asp:ImageButton ID="imgbtnRstPass" runat="server" ImageUrl="~/Images/System Admin/reset pass.png" CausesValidation="False" OnClick="imgbtnRstPass_Click" /></td>
+            </tr>
+            <tr>
+                <td rowspan="3" width="20%">
+                    <asp:ImageButton ID="imgbtnLogout" runat="server" ImageUrl="~/Images/System Admin/logout.png" CausesValidation="False" OnClick="imgbtnLogout_Click" /></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+        &nbsp;
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

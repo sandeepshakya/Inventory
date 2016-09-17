@@ -1,0 +1,125 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="../../../CSS/SysAdminCss/SysAdmin.css" type="text/css" rel="stylesheet" />
+   <link href="../../../CSS/SysAdminCss/GridViewStyle.css" type="text/css" rel="stylesheet" />
+   <%--<script language="javascript" type="text/javascript">
+  if(window.history.forward(1)!=-1)
+		{
+	
+		window.history.forward(1);
+		}</script>--%>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="head" width="100%" height="50px" style="border-left-color: black; border-bottom-color: black;
+            border-top-style: solid; border-top-color: black; border-right-style: solid;
+            border-left-style: solid; border-right-color: black; border-bottom-style: solid">
+            <tr>
+                <td width="20%" style="color: #ffffff">
+                    <asp:Image ID="Image2" runat="server" Height="55px" ImageUrl="~/CSS/SysAdminCss/SysAdminImg/large_logo.png"
+                        Width="55px" /></td>
+                <td width="80%" style="vertical-align: middle; color: white; text-align: right">
+                    &nbsp;<asp:Image ID="Image1" runat="server" ImageUrl="~/CSS/SysAdminCss/SysAdminImg/Home.png"
+                        ImageAlign="Top" />
+                    <asp:LinkButton ID="lnkbtnHome" runat="server" Font-Bold="False" ForeColor="White"
+                        Font-Size="10pt" Font-Underline="False" OnClick="lnkbtnHome_Click" CausesValidation="False">Home</asp:LinkButton>
+                    |
+                    <asp:LinkButton ID="lnkbtnLogout" runat="server" Font-Bold="False" ForeColor="White"
+                        Font-Size="10pt" Font-Underline="False" OnClick="lnkbtnLogout_Click" CausesValidation="False">Logout</asp:LinkButton></td>
+            </tr>
+        </table>
+        <table class="back" width="100%" height="632" style="border-left-color: black; border-bottom-color: black;
+            border-top-style: solid; border-top-color: black; border-right-style: solid;
+            border-left-style: solid; border-right-color: black; border-bottom-style: solid">
+            <tr>
+                <td class="redstr" width="100%" height="35px" style="vertical-align: top; text-align: right;
+                    border-left-color: black; border-bottom-color: black; border-top-style: solid;
+                    border-top-color: black; border-right-style: solid; border-left-style: solid;
+                    border-right-color: black; border-bottom-style: solid">
+                    <table width="100%">
+                        <tr>
+                            <td style="text-align: left">
+                                <asp:Label ID="lblHeading" runat="server" ForeColor="WhiteSmoke" Font-Size="Medium"
+                                    Style="position: relative" Font-Bold="True" Font-Names="Verdana">Heading</asp:Label></td>
+                            <td width="30%" style="text-align: right">
+                                <asp:Label ID="LblWelcome" runat="server" ForeColor="WhiteSmoke" Font-Size="Small"></asp:Label>
+                                |
+                                <asp:LinkButton ID="lnkbtnMyAcc" runat="server" Font-Bold="False" ForeColor="White"
+                                    Font-Size="10pt" Font-Underline="False" CausesValidation="False" OnClick="lnkbtnMyAcc_Click">My Account</asp:LinkButton>
+                                |
+                                <asp:LinkButton ID="lnkbtnContactUs" runat="server" Font-Bold="False" ForeColor="White"
+                                    Font-Size="10pt" Font-Underline="False" CausesValidation="False">Contact Us</asp:LinkButton>
+                                |
+                                <asp:LinkButton ID="lnkbtnHelp" runat="server" Font-Bold="False" ForeColor="White"
+                                    Font-Size="10pt" Font-Underline="False" CausesValidation="False">Help</asp:LinkButton></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top; text-align: right;">
+                    <table width="100%" border="0">
+                        <tr>
+                            <td width="30%" style="text-align: left">
+                                <asp:SiteMapPath ID="SiteMapPath1" runat="server" Font-Names="Verdana" Font-Size="0.8em"
+                                    PathSeparator=":>" Style="position: relative" BorderWidth="0" BorderStyle="Double" BorderColor="BurlyWood">
+                                    <PathSeparatorStyle Font-Bold="True" ForeColor="White" />
+                                    <CurrentNodeStyle ForeColor="SeaShell" />
+                                    <NodeStyle Font-Bold="True" ForeColor="FloralWhite" />
+                                    <RootNodeStyle Font-Bold="True" ForeColor="White" />
+                                </asp:SiteMapPath>
+                            </td>
+                            <td width="40%" style="text-align: center">
+                            </td>
+                            <td width="30%" style="text-align: center">
+                            </td>
+                            <td>
+                                <%--<asp:ImageButton ID="ImageButton3" runat="server" ImageUrl="~/CSS/SysAdminCss/SysAdminImg/Up.png"
+                                    CausesValidation="False" />--%>
+                                <img id="clickback" src="../../../CSS/SysAdminCss/SysAdminImg/Up.png" runat="server"
+                                    onclick="(history.back(0))" style="cursor: hand" />
+                            </td>
+                        </tr>
+                    </table>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table width="100%" height="25px">
+                        <tr>
+                            <td class="foot" style="border-left-color: black; border-bottom-color: black; border-top-style: solid;
+                                border-top-color: black; border-right-style: solid; border-left-style: solid;
+                                border-right-color: black; border-bottom-style: solid; vertical-align: middle;
+                                text-align: center;">
+                                <asp:Label ID="Label1" runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="Azure"
+                                    Text="Total Registered Companies" Font-Italic="False"></asp:Label>-<asp:Label ID="lblTotalRegistered"
+                                        runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="White" Font-Italic="False"></asp:Label>
+                                |
+                                <asp:Label ID="Label3" runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="Azure"
+                                    Text="Approved Companies" Font-Italic="False"></asp:Label>-<asp:Label ID="lblApproved"
+                                        runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="White"></asp:Label>
+                                |
+                                <asp:Label ID="Label5" runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="Azure"
+                                    Text="Disapproved Companies" Font-Italic="False"></asp:Label>-<asp:Label ID="lblDisApproved"
+                                        runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="White" Font-Italic="False"></asp:Label>
+                                |
+                                <asp:Label ID="Label7" runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="Azure"
+                                    Text="Blocked Companies" Font-Italic="False"></asp:Label>-<asp:Label ID="lblBlocked"
+                                        runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="White" Font-Italic="False"></asp:Label>
+                                |
+                                <asp:Label ID="Label9" runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="Azure"
+                                    Text="Companies In Trial" Font-Italic="False"></asp:Label>-<asp:Label ID="lblTrial"
+                                        runat="server" Font-Bold="False" Font-Size="10pt" ForeColor="White" Font-Italic="False"></asp:Label></td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

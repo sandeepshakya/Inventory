@@ -1,0 +1,150 @@
+﻿/*
+Theme Name: GridViewStyleSheet
+Version: 1.0
+Author: Sandeep Shakya
+/* CSS Document */
+
+
+/*GridViewCSS
+
+.GridViewStyle
+
+{
+
+    font-family: Verdana;
+
+    font-size:10pt;
+
+    table-layout: auto;
+
+    border-collapse: collapse;
+
+    border: #7e2020 2px solid;
+
+}*/
+
+/*Header and Pager styles*/
+
+.HeaderStyle
+{
+    background-color: #6F1E0D;
+    font-size: 10pt;
+    color: white;
+    font-family: Verdana;
+    
+}
+.FooterStyle
+{
+    background-color:#6F1E0D;
+    font-size: 10pt;
+    color: white;
+    font-family: Verdana;
+}
+/*
+.HeaderStyle th
+
+{
+
+    padding: 5px;
+
+    color: #ffffff;
+
+}*/
+
+
+
+.PagerStyle
+
+{
+
+    text-align:center;
+    margin:auto;
+    background-color:#6F1E0D;
+  
+
+}
+/*
+.PagerStyle table td
+
+{
+
+    border:0px;
+
+    padding:5px;
+
+}
+
+.PagerStyle td
+
+{
+
+    border-top: #7e2020 3px solid;
+
+}
+
+.PagerStyle a
+
+{
+
+    color:#ffffff;
+
+    text-decoration:none;
+
+    padding:2px 10px 2px 10px;
+
+    border-top:solid 1px #777777;
+
+    border-right:solid 1px #333333;
+
+    border-bottom:solid 1px #333333;
+
+    border-left:solid 1px #777777;
+
+}
+
+.PagerStyle span
+
+{
+
+    font-weight:bold;
+
+    color:#FFFFFF;
+
+    text-decoration:none;
+
+    padding:2px 10px 2px 10px;
+
+}*/
+
+/*RowStyles*/
+
+.RowStyle
+
+{
+    background-color:#EFF3FB;
+
+}
+/*
+.RowStyle td
+
+{
+
+    background-color: #f2f2f2;
+
+}
+*/
+
+.AltRowStyle
+{
+    background-color: #ffcc99;
+  
+}
+
+.SelectedRowStyle
+
+{
+
+    background-color: #D1DDF1;
+
+}
+

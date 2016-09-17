@@ -1,0 +1,29 @@
+﻿
+.modal
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    z-index: 999;
+    opacity: 0.5;
+    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+    -moz-opacity: 0.8;
+    min-height: 100%;
+    width: 100%;
+    cursor: wait;
+}
+
+.loading
+{
+    font-family: Arial;
+    font-size: 10pt;
+    min-width: 300px;
+    max-width: 600px; /* Dialog will wrap after this width */
+    height: auto;
+    display: none;
+    position: fixed;
+    background-color: #ccffff;
+    /*border: solid 5px #00303f;*/
+    color: #00303f;
+}
